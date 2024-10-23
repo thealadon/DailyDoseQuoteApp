@@ -1,0 +1,11 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <!-- Base application theme. -->
+    <style name="Base.Theme.QuoteApp" parent="Theme.AppCompat.Light.NoActionBar">
+        <!-- Customize your theme here -->
+        <item name="android:statusBarColor">@color/darkgray</item>
+        <item name="android:windowLightStatusBar">false</item> <!-- To make the status bar icons light -->
+        <item name="colorButtonNormal">@color/black</item>
+    </style>
+
+    <style name="Theme.QuoteApp" parent="Base.Theme.QuoteApp" />
+</resources>

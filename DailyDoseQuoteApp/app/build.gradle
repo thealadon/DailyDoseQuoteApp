@@ -1,0 +1,62 @@
+plugins {
+    alias(libs.plugins.android.application)
+}
+
+android {
+    namespace 'com.example.quoteapp'
+    compileSdk 34
+
+    defaultConfig {
+        applicationId "com.example.quoteapp"
+        minSdk 24
+        targetSdk 34
+        versionCode 1
+        versionName "1.0"
+
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+    }
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+}
+
+dependencies {
+
+    implementation libs.appcompat
+    implementation libs.material
+    implementation libs.activity
+    implementation libs.constraintlayout
+    testImplementation libs.junit
+    androidTestImplementation libs.ext.junit
+    androidTestImplementation libs.espresso.core
+    // AppCompat library for backward-compatible UI components
+    implementation 'androidx.appcompat:appcompat:1.3.1'
+
+    // RecyclerView library for displaying lists of items
+    implementation 'androidx.recyclerview:recyclerview:1.2.1'
+
+    // Retrofit library for making HTTP requests
+    implementation 'com.squareup.retrofit2:retrofit:2.9.0'
+
+    // Gson converter for parsing JSON responses into Java objects
+    implementation 'com.squareup.retrofit2:converter-gson:2.9.0'
+
+    // Core KTX library for Kotlin extensions
+    implementation 'androidx.core:core-ktx:1.6.0'
+
+    // OkHttp library for efficient HTTP requests
+    implementation 'com.squareup.okhttp3:okhttp:5.0.0-alpha.2'
+
+
+    implementation 'androidx.cardview:cardview:1.0.0'
+
+
+}
